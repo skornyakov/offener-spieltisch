@@ -1,0 +1,23 @@
+{{- $s := hugo.Data.einstellungen }}
+{{- $aktuell := .RelPermalink }}
+<header class="kopf">
+  <div class="rahmen kopf-innen">
+    <a class="logo" href="{{ "" | relURL }}" aria-label="{{ $s.name }}, zur Startseite">
+      {{ partial "wuerfel.html" (dict "augen" 5 "klasse" "logo-wuerfel") }}
+      <span class="logo-name">{{ $s.name }}</span>
+      {{ with $s.untertitel }}<span class="logo-zusatz">{{ . }}</span>{{ end }}
+    </a>
+    <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
+      <span class="menue-striche" aria-hidden="true"></span>
+      <span class="unsichtbar">Menü</span>
+    </button>
+    <nav id="hauptmenue" class="hauptmenue" aria-label="Hauptmenü">
+      <ul>
+        {{- range $s.menue }}
+        {{- $ziel := partial "link.html" .link }}
+        <li><a href="{{ $ziel }}"{{ if eq $ziel $aktuell }} aria-current="page"{{ end }}>{{ .titel }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+</header>

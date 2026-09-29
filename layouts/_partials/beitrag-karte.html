@@ -1,0 +1,14 @@
+<article class="beitrag-karte">
+  <a href="{{ .RelPermalink }}" class="beitrag-karte-link">
+    {{- with .Params.bild }}
+    <img src="{{ partial "link.html" . }}" alt="" loading="lazy" class="beitrag-karte-bild">
+    {{- else }}
+    <div class="beitrag-karte-bild beitrag-karte-platzhalter" aria-hidden="true">{{ partial "illustration.html" (index (slice "wuerfel" "karten" "figuren") (mod (len .Title) 3)) }}</div>
+    {{- end }}
+    <div class="beitrag-karte-text">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+      <h3>{{ .Title }}</h3>
+      {{ with .Summary }}<p>{{ . | plainify | truncate 140 }}</p>{{ end }}
+    </div>
+  </a>
+</article>

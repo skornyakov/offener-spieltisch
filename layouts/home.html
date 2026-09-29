@@ -1,0 +1,97 @@
+{{ define "main" }}
+{{- $s := hugo.Data.einstellungen }}
+{{- $h := hugo.Data.startseite }}
+
+<section class="held">
+  <div class="rahmen held-innen">
+    <div class="held-text">
+      {{ with $h.hero.oberzeile }}<p class="plakette">{{ . }}</p>{{ end }}
+      <h1 class="held-claim">{{ $h.hero.claim }}</h1>
+      <p class="held-einleitung">{{ $h.hero.text }}</p>
+      <div class="knoepfe">
+        <a class="knopf knopf-haupt" href="#karte">{{ $h.hero.knopf }}
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v13M4 10l6 6 6-6"/></svg>
+        </a>
+        {{ with $h.hero.knopf2_text }}<a class="knopf knopf-rand" href="{{ partial "link.html" $h.hero.knopf2_link }}">{{ . }}</a>{{ end }}
+      </div>
+    </div>
+    <div class="held-bild">
+      {{ partial "illustration.html" "held" }}
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt" aria-labelledby="so-gehts">
+  <div class="rahmen">
+    <h2 id="so-gehts" class="abschnitt-titel">{{ $h.so_gehts.titel }}</h2>
+    <ol class="schritte">
+      {{- range $i, $sch := $h.so_gehts.schritte }}
+      <li class="schritt">
+        {{ partial "wuerfel.html" (dict "augen" (add $i 1) "klasse" (printf "schritt-wuerfel farbe-%d" (mod $i 4))) }}
+        <h3>{{ $sch.titel }}</h3>
+        <p>{{ $sch.text }}</p>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt-flaeche" id="karte" aria-labelledby="karte-titel">
+  <div class="rahmen">
+    <div class="abschnitt-kopf">
+      <h2 id="karte-titel" class="abschnitt-titel">{{ $h.karte.titel }}</h2>
+      <p class="abschnitt-text">{{ $h.karte.text }}</p>
+    </div>
+    {{ partial "karte.html" . }}
+    {{ with $h.karte.fehlt_text }}
+    <p class="karte-fehlt">{{ . }}{{ with $s.kontakt_email }} <a href="mailto:{{ . }}?subject=Spielort%20vorschlagen">{{ . }}</a>{{ end }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="abschnitt" aria-labelledby="spielwoche-titel">
+  <div class="rahmen">
+    <div class="woche">
+      <div class="woche-datum" aria-hidden="true">
+        <span class="woche-tage">{{ $h.spielwoche.datum_gross }}</span>
+        <span class="woche-monat">{{ $h.spielwoche.datum_klein }}</span>
+      </div>
+      <div class="woche-text">
+        <h2 id="spielwoche-titel" class="abschnitt-titel">{{ $h.spielwoche.titel }}</h2>
+        <p>{{ $h.spielwoche.text }}</p>
+        {{ with $s.kerntag }}<p class="woche-kerntag">{{ partial "wuerfel.html" (dict "augen" 6 "klasse" "mini-wuerfel") }} Großer Spieletag: {{ . }}</p>{{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{- $beitraege := first 3 (where site.RegularPages "Section" "blog") }}
+{{- with $beitraege }}
+<section class="abschnitt" aria-labelledby="blog-titel">
+  <div class="rahmen">
+    <div class="abschnitt-kopf abschnitt-kopf-zeile">
+      <h2 id="blog-titel" class="abschnitt-titel">{{ $h.blog.titel }}</h2>
+      <a class="mehr-link" href="{{ "blog/" | relURL }}">Alle Beiträge</a>
+    </div>
+    <div class="beitraege">
+      {{- range . }}{{ partial "beitrag-karte.html" . }}{{ end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+<section class="abschnitt abschnitt-mitmachen" aria-labelledby="mitmachen-titel">
+  <div class="rahmen">
+    <h2 id="mitmachen-titel" class="abschnitt-titel">{{ $h.mitmachen.titel }}</h2>
+    <div class="mitmachen">
+      {{- range $i, $k := $h.mitmachen.karten }}
+      <article class="mitmachen-karte farbe-{{ mod $i 4 }}">
+        <h3>{{ $k.titel }}</h3>
+        <p>{{ $k.text }}</p>
+        {{ with $k.link }}<a class="pfeil-link" href="{{ partial "link.html" . }}">{{ $k.link_text | default "Mehr erfahren" }}</a>{{ end }}
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{ end }}

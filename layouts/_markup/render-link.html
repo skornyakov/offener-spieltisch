@@ -1,0 +1,7 @@
+{{- /* Interne Links im Text (z. B. /mitmachen/) funktionieren auch im Unterordner.
+     Externe Links öffnen in einem neuen Tab. */ -}}
+{{- $ziel := .Destination -}}
+{{- $extern := hasPrefix $ziel "http" -}}
+{{- if hasPrefix $ziel "/" -}}{{- $ziel = partial "link.html" $ziel -}}{{- end -}}
+<a href="{{ $ziel }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $extern }} target="_blank" rel="noopener"{{ end }}>{{ .Text }}</a>
+{{- /* */ -}}

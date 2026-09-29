@@ -1,0 +1,39 @@
+{{- /* Die Karte der Spielorte (Google My Maps).
+     Sie wird erst geladen, wenn jemand auf "Karte laden" klickt (Datenschutz).
+     Im CMS unter "Einstellungen" > "Karte" den Link oder den ganzen iframe-Code eintragen. */ -}}
+{{- $s := hugo.Data.einstellungen }}
+{{- $roh := $s.karte_einbettung | default "" | strings.TrimSpace }}
+{{- $src := $roh }}
+{{- if in $roh "<iframe" }}
+  {{- $src = replaceRE `(?s).*src="([^"]+)".*` "$1" $roh }}
+{{- end }}
+{{- $src = $src | htmlUnescape }}
+<div class="karte">
+{{- if $src }}
+  {{- $ansicht := replace $src "/embed?" "/viewer?" }}
+  <div class="karte-rahmen" data-karte="{{ $src }}">
+    <div class="karte-zustimmung">
+      <svg class="karte-pin" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 4C20 4 11 13 11 25c0 15 21 35 21 35s21-20 21-35C53 13 44 4 32 4z" class="pin-form"/>
+        <circle cx="32" cy="25" r="9" class="pin-loch"/>
+      </svg>
+      <p class="karte-titel">Spielorte auf der Karte ansehen</p>
+      <p class="karte-hinweis">{{ $s.karte_hinweis }}</p>
+      <button class="knopf knopf-haupt" type="button" data-karte-laden>Karte laden</button>
+      <label class="karte-merken"><input type="checkbox" data-karte-merken> Karte künftig direkt laden</label>
+    </div>
+  </div>
+  <p class="karte-extra"><a href="{{ $ansicht }}" target="_blank" rel="noopener">Karte groß in Google Maps öffnen</a></p>
+{{- else }}
+  <div class="karte-rahmen karte-leer">
+    <div class="karte-zustimmung">
+      <svg class="karte-pin" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 4C20 4 11 13 11 25c0 15 21 35 21 35s21-20 21-35C53 13 44 4 32 4z" class="pin-form"/>
+        <circle cx="32" cy="25" r="9" class="pin-loch"/>
+      </svg>
+      <p class="karte-titel">Die Karte kommt bald</p>
+      <p class="karte-hinweis">Wir sammeln gerade die ersten Spielorte.</p>
+    </div>
+  </div>
+{{- end }}
+</div>

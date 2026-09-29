@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="seite">
+  <div class="rahmen fehler">
+    {{ partial "illustration.html" "wuerfel" }}
+    <h1 class="seiten-titel">Diese Seite gibt es nicht</h1>
+    <p>Da hat der Würfel falsch gezeigt. Versuch es auf der Startseite.</p>
+    <p><a class="knopf knopf-haupt" href="{{ "" | relURL }}">Zur Startseite</a></p>
+  </div>
+</section>
+{{ end }}

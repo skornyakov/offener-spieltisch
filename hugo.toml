@@ -1,0 +1,32 @@
+# Grundeinstellungen der Seite.
+# Die meisten Inhalte (Texte, Menü, Karte) werden NICHT hier gepflegt,
+# sondern im CMS (Pages CMS) unter "Startseite" und "Einstellungen".
+
+# Wird beim Veröffentlichen automatisch gesetzt (siehe .github/workflows/veroeffentlichen.yml).
+baseURL = "https://example.org/"
+locale = "de-DE"
+defaultContentLanguage = "de"
+title = "Spielwoche"
+timeZone = "Europe/Berlin"
+# Umlaute in Adressen umschreiben (ä -> a), damit Links sauber bleiben
+removePathAccents = true
+
+# Keine Seiten für Schlagworte und Kategorien
+disableKinds = ["taxonomy", "term", "rss"]
+
+[pagination]
+  pagerSize = 10
+
+[permalinks.page]
+  blog = "/blog/:slug/"
+
+[markup.goldmark.renderer]
+  # Erlaubt einfache HTML-Schnipsel in Texten (z. B. eingebettete Videos)
+  unsafe = true
+
+[params]
+  description = "Eine Woche, in der Menschen, die sich sonst nie begegnen würden, gemeinsam spielen."
+
+[markup.goldmark.parser]
+  # Sprungmarken ohne Umlaute: "Für Orte" wird zu #fur-orte
+  autoHeadingIDType = "github-ascii"

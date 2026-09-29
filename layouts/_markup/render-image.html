@@ -1,0 +1,6 @@
+{{- /* Sorgt dafür, dass Bilder im Text auch dann funktionieren,
+     wenn die Seite in einem Unterordner liegt (z. B. auf GitHub Pages). */ -}}
+{{- $src := .Destination -}}
+{{- if hasPrefix $src "/" -}}{{- $src = partial "link.html" $src -}}{{- end -}}
+<img src="{{ $src }}" alt="{{ .PlainText }}" loading="lazy"{{ with .Title }} title="{{ . }}"{{ end }}>
+{{- /* */ -}}

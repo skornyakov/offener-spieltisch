@@ -1,0 +1,35 @@
+{{- $s := hugo.Data.einstellungen }}
+<footer class="fuss">
+  <div class="fuss-deko" aria-hidden="true">
+    <span class="stein stein-rot"></span><span class="stein stein-gelb"></span><span class="stein stein-gruen"></span><span class="stein stein-blau"></span>
+  </div>
+  <div class="rahmen fuss-innen">
+    <div class="fuss-spalte fuss-ueber">
+      <a class="logo logo-hell" href="{{ "" | relURL }}">
+        {{ partial "wuerfel.html" (dict "augen" 5 "klasse" "logo-wuerfel") }}
+        <span class="logo-name">{{ $s.name }}</span>
+      </a>
+      <p>{{ $s.footer_text }}</p>
+      <p class="fuss-zeitraum">{{ $s.zeitraum }}</p>
+    </div>
+    <nav class="fuss-spalte" aria-label="Seiten">
+      <h2 class="fuss-titel">Seiten</h2>
+      <ul>
+        {{- range $s.menue }}
+        <li><a href="{{ partial "link.html" .link }}">{{ .titel }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+    <nav class="fuss-spalte" aria-label="Rechtliches und Kontakt">
+      <h2 class="fuss-titel">Kontakt</h2>
+      <ul>
+        {{- with $s.kontakt_email }}
+        <li><a href="mailto:{{ . }}">{{ . }}</a></li>
+        {{- end }}
+        {{- range $s.footer_menue }}
+        <li><a href="{{ partial "link.html" .link }}">{{ .titel }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+</footer>

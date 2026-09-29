@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article class="seite">
+  <header class="seiten-kopf">
+    <div class="rahmen seiten-kopf-innen">
+      <div>
+        <h1 class="seiten-titel">{{ .Title }}</h1>
+        {{ with .Description }}<p class="seiten-einleitung">{{ . }}</p>{{ end }}
+      </div>
+      <div class="seiten-bild">{{ partial "illustration.html" "karten" }}</div>
+    </div>
+  </header>
+  <div class="rahmen">
+    {{ with .Content }}<div class="text">{{ . }}</div>{{ end }}
+    {{ $p := .Paginate (where .RegularPages "Draft" false) }}
+    <div class="beitraege beitraege-liste">
+      {{ range $p.Pages }}{{ partial "beitrag-karte.html" . }}{{ end }}
+    </div>
+    {{ if gt $p.TotalPages 1 }}
+    <nav class="seitenwahl" aria-label="Weitere Beiträge">
+      {{ with $p.Prev }}<a class="knopf knopf-rand" href="{{ .URL }}">Neuere Beiträge</a>{{ end }}
+      {{ with $p.Next }}<a class="knopf knopf-rand" href="{{ .URL }}">Ältere Beiträge</a>{{ end }}
+    </nav>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

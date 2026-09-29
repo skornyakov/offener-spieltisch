@@ -1,0 +1,25 @@
+name: Spielwoche
+untertitel: Arbeitstitel
+zeitraum: 25. bis 31. Januar 2027
+kerntag: Samstag, 30. Januar 2027
+beschreibung: Eine Woche, in der Menschen, die sich sonst nie begegnen würden, gemeinsam spielen.
+kontakt_email: hallo@example.org
+karte_einbettung: ""
+karte_hinweis: Die Karte wird von Google Maps geladen. Dabei werden Daten (z. B. deine IP-Adresse) an Google übertragen. Mehr dazu in der Datenschutzerklärung.
+footer_text: Eine offene Initiative. Inspiriert von der Nationalen Spellenweek in den Niederlanden.
+menue:
+  - titel: Die Idee
+    link: /idee/
+  - titel: Spielorte
+    link: /karte/
+  - titel: Mitmachen
+    link: /mitmachen/
+  - titel: Blog
+    link: /blog/
+footer_menue:
+  - titel: Kontakt
+    link: /kontakt/
+  - titel: Impressum
+    link: /impressum/
+  - titel: Datenschutz
+    link: /datenschutz/

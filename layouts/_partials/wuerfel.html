@@ -1,0 +1,16 @@
+{{- /* Ein Würfel als SVG. Aufruf: partial "wuerfel.html" (dict "augen" 3 "klasse" "x") */ -}}
+{{- $augen := .augen | default 1 -}}
+{{- $p := dict
+  "1" (slice (slice 24 24))
+  "2" (slice (slice 14 14) (slice 34 34))
+  "3" (slice (slice 13 13) (slice 24 24) (slice 35 35))
+  "4" (slice (slice 14 14) (slice 34 14) (slice 14 34) (slice 34 34))
+  "5" (slice (slice 13 13) (slice 35 13) (slice 24 24) (slice 13 35) (slice 35 35))
+  "6" (slice (slice 14 12) (slice 34 12) (slice 14 24) (slice 34 24) (slice 14 36) (slice 34 36))
+-}}
+<svg class="wuerfel {{ .klasse }}" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+  <rect x="2" y="2" width="44" height="44" rx="11" class="wuerfel-koerper"/>
+  {{- range index $p (string $augen) }}
+  <circle cx="{{ index . 0 }}" cy="{{ index . 1 }}" r="4.2" class="wuerfel-auge"/>
+  {{- end }}
+</svg>

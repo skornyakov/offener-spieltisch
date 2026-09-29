@@ -1,0 +1,31 @@
+<!doctype html>
+{{- $s := hugo.Data.einstellungen }}
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- $titel := cond .IsHome (printf "%s: %s" $s.name $s.zeitraum) (printf "%s | %s" .Title $s.name) }}
+  <title>{{ $titel }}</title>
+  {{- $beschreibung := or .Description .Summary $s.beschreibung | plainify | truncate 160 }}
+  <meta name="description" content="{{ $beschreibung }}">
+  <meta property="og:title" content="{{ $titel }}">
+  <meta property="og:description" content="{{ $beschreibung }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="preload" href="{{ "fonts/bricolage.woff" | relURL }}" as="font" type="font/woff" crossorigin>
+  {{- $css := resources.Get "css/stil.css" | resources.ExecuteAsTemplate "css/stil.css" . | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="sprung" href="#inhalt">Zum Inhalt springen</a>
+  {{ partial "kopf.html" . }}
+  <main id="inhalt">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "fuss.html" . }}
+  {{- $js := resources.Get "js/seite.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+</body>
+</html>

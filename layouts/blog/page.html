@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="seite beitrag">
+  <header class="rahmen beitrag-kopf">
+    <a class="zurueck-link" href="{{ "blog/" | relURL }}">Alle Beiträge</a>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+    <h1 class="seiten-titel">{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="seiten-einleitung">{{ . }}</p>{{ end }}
+  </header>
+  {{ with .Params.bild }}
+  <div class="rahmen"><img class="beitrag-bild" src="{{ partial "link.html" . }}" alt=""></div>
+  {{ end }}
+  <div class="rahmen">
+    <div class="text">{{ .Content }}</div>
+  </div>
+</article>
+{{ end }}

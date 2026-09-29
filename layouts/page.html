@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="seite">
+  <header class="seiten-kopf">
+    <div class="rahmen seiten-kopf-innen">
+      <div>
+        <h1 class="seiten-titel">{{ .Title }}</h1>
+        {{ with .Description }}<p class="seiten-einleitung">{{ . }}</p>{{ end }}
+      </div>
+      {{ with .Params.illustration }}{{ if ne . "keine" }}<div class="seiten-bild">{{ partial "illustration.html" . }}</div>{{ end }}{{ end }}
+    </div>
+  </header>
+  <div class="rahmen">
+    {{- if eq .File.ContentBaseName "karte" }}
+    <div class="seiten-karte">{{ partial "karte.html" . }}</div>
+    {{- end }}
+    <div class="text">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

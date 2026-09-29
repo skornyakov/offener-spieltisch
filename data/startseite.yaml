@@ -1,0 +1,42 @@
+hero:
+  oberzeile: 25. bis 31. Januar 2027
+  claim: Komm an den Tisch.
+  text: Eine Woche lang laden Cafés, Bibliotheken und Nachbarschaftstreffs zum Spielen ein. Du brauchst keine Spiele, keine Vorkenntnisse und keine Verabredung. Nur Lust, mit Menschen zu spielen, die du noch nicht kennst.
+  knopf: Spiel in deiner Nähe finden
+  knopf2_text: Mitmachen
+  knopf2_link: /mitmachen/
+so_gehts:
+  titel: So funktioniert es
+  schritte:
+    - titel: Orte öffnen ihre Tische
+      text: Bibliotheken, Familienzentren, Cafés, Stadtteiltreffs und Spieleläden stellen Platz und Tische bereit.
+    - titel: Spielleiter:innen holen Leute dazu
+      text: Spielbegeisterte erklären die Regeln, wählen einfache Spiele aus und sorgen dafür, dass niemand am Rand stehen bleibt.
+    - titel: Du setzt dich einfach dazu
+      text: Das Spiel übernimmt den schwierigsten Teil, den ersten Satz. Der Rest ergibt sich am Tisch.
+karte:
+  titel: Hier wird schon heute gespielt
+  text: Viele Orte laden bereits regelmäßig zum Spielen ein. Auf der Karte findest du sie, mit Zeiten, Plätzen und den Spielen, die dort meist auf dem Tisch liegen.
+  fehlt_text: Du kennst einen Ort, der fehlt? Schreib uns.
+spielwoche:
+  titel: Die Spielwoche im Januar
+  datum_gross: 25.–31.
+  datum_klein: Januar 2027
+  text: Vom 25. bis 31. Januar 2027 wird überall gespielt, mit einem großen Spieletag am Samstag, 30. Januar. Wir starten in Berlin, und jeder Ort in Deutschland kann mitmachen.
+mitmachen:
+  titel: Mach mit
+  karten:
+    - titel: Für Orte
+      text: Du hast Tische und Lust auf neue Gesichter? Trag deinen Ort ein. Wir helfen dir, Spielleiter:innen zu finden.
+      link_text: Ort eintragen
+      link: /mitmachen/#fur-orte
+    - titel: Für Spielleiter:innen
+      text: Du erklärst gerne Spiele und holst Menschen an den Tisch? Dann brauchen wir dich, für einen Abend oder mehrere.
+      link_text: Spielleiter:in werden
+      link: /mitmachen/#fur-spielleiterinnen
+    - titel: Fürs Kernteam
+      text: Wir suchen Menschen, die mit uns Orte gewinnen, erzählen, was wir tun, und Spielleiter:innen begleiten.
+      link_text: Im Team mitarbeiten
+      link: /mitmachen/#furs-kernteam
+blog:
+  titel: Neues aus der Spielwoche

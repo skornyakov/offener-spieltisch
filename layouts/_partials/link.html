@@ -1,0 +1,8 @@
+{{- /* Macht aus einem Link aus dem CMS eine funktionierende Adresse.
+     Externe Links (http, mailto, tel) und Sprungmarken (#) bleiben unverändert,
+     interne Links (/idee/) bekommen den richtigen Pfad der Seite vorangestellt. */ -}}
+{{- $l := . | default "" | strings.TrimSpace -}}
+{{- if or (hasPrefix $l "http") (hasPrefix $l "mailto:") (hasPrefix $l "tel:") (hasPrefix $l "#") -}}
+  {{- return $l -}}
+{{- end -}}
+{{- return (strings.TrimPrefix "/" $l | relURL) -}}

@@ -1,0 +1,87 @@
+{{- /* Einfache Spiel-Illustrationen. Später durch Fotos oder Zeichnungen ersetzbar.
+     Aufruf: partial "illustration.html" "held" | "wuerfel" | "figuren" | "karten" */ -}}
+{{- $name := . | default "keine" -}}
+{{- define "partials/figur" -}}
+{{- /* Spielfigur, Fußpunkt bei 0,0 */ -}}
+<g transform="translate({{ .x }} {{ .y }}) scale({{ .s | default 1 }})">
+  <ellipse cx="0" cy="4" rx="30" ry="7" class="schatten"/>
+  <path d="M-20 0 C-20 -18 -9 -30 -7 -42 L7 -42 C9 -30 20 -18 20 0 Z" class="f-{{ .farbe }} umriss"/>
+  <rect x="-13" y="-47" width="26" height="8" rx="4" class="f-{{ .farbe }} umriss"/>
+  <circle cx="0" cy="-61" r="15" class="f-{{ .farbe }} umriss"/>
+  <rect x="-25" y="-6" width="50" height="11" rx="5.5" class="f-{{ .farbe }} umriss"/>
+  <path d="M-11 -30 C-12 -20 -14 -12 -15 -6" class="glanz"/>
+</g>
+{{- end -}}
+
+{{- if eq $name "held" }}
+<svg class="illu illu-held" viewBox="0 0 480 450" role="img" aria-label="Würfel, Spielkarten und Spielfiguren">
+  <circle cx="250" cy="225" r="195" class="f-flaeche"/>
+  <circle cx="250" cy="225" r="150" class="ring"/>
+  <circle cx="72" cy="150" r="11" class="f-blau umriss"/>
+  <circle cx="430" cy="215" r="9" class="f-gruen umriss"/>
+  <circle cx="265" cy="420" r="8" class="f-rot umriss"/>
+  <circle cx="400" cy="58" r="7" class="f-gelb umriss"/>
+  <circle cx="150" cy="55" r="6" class="f-rot umriss"/>
+  <g transform="translate(185 215) rotate(-13)">
+    <rect x="-60" y="-82" width="120" height="164" rx="15" class="f-weiss umriss"/>
+    <circle cx="-44" cy="-66" r="4.5" class="f-tinte"/>
+    <circle cx="44" cy="66" r="4.5" class="f-tinte"/>
+    <circle cx="0" cy="0" r="27" class="f-gelb umriss"/>
+    <circle cx="0" cy="0" r="11" class="f-weiss umriss"/>
+  </g>
+  <g transform="translate(238 228) rotate(10)">
+    <rect x="-60" y="-82" width="120" height="164" rx="15" class="f-weiss umriss"/>
+    <circle cx="-44" cy="-66" r="4.5" class="f-tinte"/>
+    <circle cx="44" cy="66" r="4.5" class="f-tinte"/>
+    <path d="M0.0 -26.0 L6.5 -8.9 L24.7 -8.0 L10.5 3.4 L15.3 21.0 L0.0 11.0 L-15.3 21.0 L-10.5 3.4 L-24.7 -8.0 L-6.5 -8.9 Z" transform="scale(1.35)" class="f-gruen umriss"/>
+  </g>
+  <g transform="translate(345 118) rotate(14)">
+    <rect x="-50" y="-50" width="100" height="100" rx="23" class="f-rot umriss"/>
+    <circle cx="-25" cy="-25" r="8.5" class="f-weiss"/>
+    <circle cx="25" cy="-25" r="8.5" class="f-weiss"/>
+    <circle cx="0" cy="0" r="8.5" class="f-weiss"/>
+    <circle cx="-25" cy="25" r="8.5" class="f-weiss"/>
+    <circle cx="25" cy="25" r="8.5" class="f-weiss"/>
+  </g>
+  <g transform="translate(372 322) rotate(-17)">
+    <rect x="-38" y="-38" width="76" height="76" rx="18" class="f-blau umriss"/>
+    <circle cx="-19" cy="-19" r="7" class="f-weiss"/>
+    <circle cx="0" cy="0" r="7" class="f-weiss"/>
+    <circle cx="19" cy="19" r="7" class="f-weiss"/>
+  </g>
+  {{ template "partials/figur" (dict "x" 118 "y" 392 "s" 1.15 "farbe" "gelb") }}
+  {{ template "partials/figur" (dict "x" 190 "y" 408 "s" 0.95 "farbe" "gruen") }}
+  {{ template "partials/figur" (dict "x" 88 "y" 250 "s" 0.8 "farbe" "blau") }}
+</svg>
+{{- else if eq $name "wuerfel" }}
+<svg class="illu" viewBox="0 0 200 140" aria-hidden="true">
+  <circle cx="100" cy="72" r="62" class="f-flaeche"/>
+  <g transform="translate(78 70) rotate(-12)">
+    <rect x="-34" y="-34" width="68" height="68" rx="16" class="f-rot umriss"/>
+    <circle cx="-17" cy="-17" r="6" class="f-weiss"/><circle cx="17" cy="17" r="6" class="f-weiss"/>
+  </g>
+  <g transform="translate(132 84) rotate(16)">
+    <rect x="-28" y="-28" width="56" height="56" rx="13" class="f-gelb umriss"/>
+    <circle cx="-13" cy="-13" r="5" class="f-tinte"/><circle cx="0" cy="0" r="5" class="f-tinte"/><circle cx="13" cy="13" r="5" class="f-tinte"/>
+  </g>
+</svg>
+{{- else if eq $name "figuren" }}
+<svg class="illu" viewBox="0 0 200 140" aria-hidden="true">
+  <circle cx="100" cy="72" r="62" class="f-flaeche"/>
+  {{ template "partials/figur" (dict "x" 62 "y" 118 "s" 0.8 "farbe" "blau") }}
+  {{ template "partials/figur" (dict "x" 100 "y" 124 "s" 1 "farbe" "rot") }}
+  {{ template "partials/figur" (dict "x" 140 "y" 118 "s" 0.8 "farbe" "gruen") }}
+</svg>
+{{- else if eq $name "karten" }}
+<svg class="illu" viewBox="0 0 200 140" aria-hidden="true">
+  <circle cx="100" cy="72" r="62" class="f-flaeche"/>
+  <g transform="translate(84 72) rotate(-14)">
+    <rect x="-32" y="-44" width="64" height="88" rx="10" class="f-weiss umriss"/>
+    <circle cx="0" cy="0" r="14" class="f-blau umriss"/>
+  </g>
+  <g transform="translate(116 74) rotate(10)">
+    <rect x="-32" y="-44" width="64" height="88" rx="10" class="f-weiss umriss"/>
+    <path d="M0.0 -26.0 L6.5 -8.9 L24.7 -8.0 L10.5 3.4 L15.3 21.0 L0.0 11.0 L-15.3 21.0 L-10.5 3.4 L-24.7 -8.0 L-6.5 -8.9 Z" transform="scale(.7)" class="f-rot umriss"/>
+  </g>
+</svg>
+{{- end }}

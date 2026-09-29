@@ -1,0 +1,181 @@
+# Konfiguration für Pages CMS (https://pagescms.org)
+# Hier steht, welche Inhalte das Team im CMS bearbeiten kann.
+
+media:
+  input: static/bilder
+  output: /bilder
+  categories: [image]
+
+settings:
+  content:
+    # Felder, die hier nicht aufgeführt sind, bleiben beim Speichern erhalten
+    merge: true
+
+content:
+  - name: blog
+    label: Blog
+    type: collection
+    path: content/blog
+    exclude: [_index.md]
+    format: yaml-frontmatter
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Titel
+        type: string
+        required: true
+      - name: date
+        label: Datum
+        type: date
+        required: true
+      - name: summary
+        label: Kurzbeschreibung
+        description: Ein bis zwei Sätze. Erscheint auf der Startseite und in der Blog-Übersicht.
+        type: text
+      - name: bild
+        label: Bild (optional)
+        description: Querformat funktioniert am besten. Ohne Bild erscheint eine Illustration.
+        type: image
+      - name: draft
+        label: Entwurf (noch nicht veröffentlichen)
+        type: boolean
+        default: false
+      - name: body
+        label: Text
+        type: rich-text
+
+  - name: seiten
+    label: Seiten
+    type: collection
+    path: content
+    subfolders: false
+    filename: "{primary}.md"
+    exclude: [_index.md]
+    format: yaml-frontmatter
+    view:
+      fields: [title]
+      primary: title
+    fields:
+      - name: title
+        label: Titel
+        type: string
+        required: true
+      - name: description
+        label: Einleitung
+        description: Kurzer Satz unter dem Titel. Wird auch von Suchmaschinen angezeigt.
+        type: text
+      - name: illustration
+        label: Illustration oben rechts
+        type: select
+        default: keine
+        options:
+          values:
+            - { value: keine, label: Keine }
+            - { value: wuerfel, label: Würfel }
+            - { value: figuren, label: Spielfiguren }
+            - { value: karten, label: Spielkarten }
+      - name: body
+        label: Text
+        type: rich-text
+
+  - name: startseite
+    label: Startseite
+    type: file
+    path: data/startseite.yaml
+    format: yaml
+    fields:
+      - name: hero
+        label: Oberer Bereich
+        type: object
+        fields:
+          - { name: oberzeile, label: Zeile über dem Claim (z. B. Datum), type: string }
+          - { name: claim, label: Claim, type: string }
+          - { name: text, label: Einleitungstext, type: text }
+          - { name: knopf, label: Beschriftung Knopf zur Karte, type: string }
+          - { name: knopf2_text, label: Beschriftung zweiter Knopf, type: string }
+          - { name: knopf2_link, label: Link zweiter Knopf, type: string, description: "Interne Seiten mit Schrägstrich, z. B. /mitmachen/" }
+      - name: so_gehts
+        label: So funktioniert es
+        type: object
+        fields:
+          - { name: titel, label: Überschrift, type: string }
+          - name: schritte
+            label: Schritte
+            type: object
+            list: true
+            fields:
+              - { name: titel, label: Titel, type: string }
+              - { name: text, label: Text, type: text }
+      - name: karte
+        label: Bereich Karte
+        type: object
+        fields:
+          - { name: titel, label: Überschrift, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: fehlt_text, label: Satz unter der Karte, type: string }
+      - name: spielwoche
+        label: Bereich Spielwoche
+        type: object
+        fields:
+          - { name: titel, label: Überschrift, type: string }
+          - { name: datum_gross, label: Datum groß (z. B. 25.–31.), type: string }
+          - { name: datum_klein, label: Datum klein (z. B. Januar 2027), type: string }
+          - { name: text, label: Text, type: text }
+      - name: blog
+        label: Bereich Blog
+        type: object
+        fields:
+          - { name: titel, label: Überschrift, type: string }
+      - name: mitmachen
+        label: Bereich Mitmachen
+        type: object
+        fields:
+          - { name: titel, label: Überschrift, type: string }
+          - name: karten
+            label: Kacheln
+            type: object
+            list: true
+            fields:
+              - { name: titel, label: Titel, type: string }
+              - { name: text, label: Text, type: text }
+              - { name: link_text, label: Linktext, type: string }
+              - { name: link, label: Link, type: string }
+
+  - name: einstellungen
+    label: Einstellungen
+    type: file
+    path: data/einstellungen.yaml
+    format: yaml
+    fields:
+      - { name: name, label: Name der Initiative, type: string }
+      - { name: untertitel, label: Kleiner Zusatz neben dem Namen (leer lassen zum Ausblenden), type: string }
+      - { name: zeitraum, label: Zeitraum, type: string }
+      - { name: kerntag, label: Großer Spieletag, type: string }
+      - { name: beschreibung, label: Kurzbeschreibung für Suchmaschinen, type: text }
+      - { name: kontakt_email, label: Kontakt-E-Mail, type: string }
+      - name: karte_einbettung
+        label: Karte (Google My Maps)
+        description: In My Maps auf "Teilen" > "In meine Website einbetten" klicken und den kompletten Code oder nur den Link hier einfügen. Leer lassen, solange es keine Karte gibt.
+        type: text
+      - { name: karte_hinweis, label: Datenschutzhinweis vor dem Laden der Karte, type: text }
+      - { name: footer_text, label: Text in der Fußzeile, type: text }
+      - name: menue
+        label: Hauptmenü
+        type: object
+        list: true
+        fields:
+          - { name: titel, label: Beschriftung, type: string }
+          - { name: link, label: Link, type: string, description: "Interne Seiten mit Schrägstrich, z. B. /idee/" }
+      - name: footer_menue
+        label: Links in der Fußzeile
+        type: object
+        list: true
+        fields:
+          - { name: titel, label: Beschriftung, type: string }
+          - { name: link, label: Link, type: string }
