@@ -2,11 +2,16 @@ name: Spielwoche
 untertitel: Arbeitstitel
 zeitraum: 25. bis 31. Januar 2027
 kerntag: Samstag, 30. Januar 2027
-beschreibung: Eine Woche, in der Menschen, die sich sonst nie begegnen würden, gemeinsam spielen.
+beschreibung: Eine Woche, in der Menschen, die sich sonst nie begegnen würden,
+  gemeinsam spielen.
 kontakt_email: hallo@example.org
-karte_einbettung: ""
-karte_hinweis: Die Karte wird von Google Maps geladen. Dabei werden Daten (z. B. deine IP-Adresse) an Google übertragen. Mehr dazu in der Datenschutzerklärung.
-footer_text: Eine offene Initiative. Inspiriert von der Nationalen Spellenweek in den Niederlanden.
+karte_einbettung: <iframe
+  src="https://www.google.com/maps/d/u/0/embed?mid=1hIqDMXYHqEHorLdqjrKNn_c-JHJejNY&ehbc=2E312F"
+  width="640" height="480"></iframe>
+karte_hinweis: Die Karte wird von Google Maps geladen. Dabei werden Daten (z. B.
+  deine IP-Adresse) an Google übertragen. Mehr dazu in der Datenschutzerklärung.
+footer_text: Eine offene Initiative. Inspiriert von der Nationalen Spellenweek
+  in den Niederlanden.
 menue:
   - titel: Die Idee
     link: /idee/
