@@ -1,19 +1,25 @@
 ---
 title: Impressum
-description: Dieses ist ein private Initiative, solange wir noch keinen Verein
-  oder ähnliches gegründet haben, steht hier die Adresse der Firma. Es ist
-  jedoch geplant einen gemeinnützige Organisation zu gründen.
+description: ""
 illustration: keine
 anmelde_knopf: false
 ---
-Angaben gemäß § 5 DDG
+## Über die Initiative
 
-Anton Skornyakov  
-c/o Agile.Coach GmbH & Co. KG
-Mühlenstr. 8a
+Die Spielbrücke ist eine private, unabhängige Initiative. Die Agile.Coach GmbH & Co. KG stellt ihre Anschrift für Post zur Verfügung. Wir planen, eine gemeinnützige Organisation zu gründen. Dann ändern sich diese Angaben.
+
+## Angaben gemäß § 5 DDG und § 18 MStV
+
+Anton Skornyakov\
+c/o Agile.Coach GmbH & Co. KG\
+Mühlenstr. 8a\
 14167 Berlin
-Tel.: 030 /­ 692 086 593
 
-E-Mail: kontakt (at-Zeichen) spielbruecke.de
+Telefon: 030 692 086 593\
+E-Mail: [kontakt@spielbruecke.de](mailto:kontakt@spielbruecke.de)
 
-Verantwortlich für den Inhalt: Anton Skornyakov, c/o Agile.Coach GmbH & Co. KG, Mühlenstr. 8a, 14167 Berlin
+## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+
+Anton Skornyakov, Anschrift wie oben
+
+

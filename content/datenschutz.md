@@ -3,43 +3,63 @@ title: Datenschutz
 illustration: keine
 anmelde_knopf: false
 ---
-### Datenschutzerklärung
+Stand: Oktober 2026
 
-Diese Datenschutzerklärung klärt Sie auf über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes. Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
+Hier erklären wir, welche personenbezogenen Daten wir auf spielbruecke.de verarbeiten, wofür und auf welcher Rechtsgrundlage. Begriffe wie "Verarbeitung" oder "Verantwortlicher" verwenden wir im Sinne von Art. 4 der Datenschutz-Grundverordnung (DSGVO).
 
-- **Verantwortliche Stelle** siehe [Impressum](https://spielbruecke.de/impressum/)
-- **Hosting:** Die Seite liegt bei GitHub Pages (GitHub Inc.). Beim Aufruf werden technisch notwendige Daten wie die IP-Adresse verarbeitet. Hier mehr
-  - Unser Hoster erhebt in sog. Logfiles folgende Daten, die Ihr Browser übermittelt:
-  
-    IP-Adresse, die Adresse der vorher besuchten Website (Referer Anfrage-Header), Datum und Uhrzeit der Anfrage, Zeitzonendifferenz zur Greenwich Mean Time, Inhalt der Anforderung, HTTP-Statuscode, übertragene Datenmenge, Website, von der die Anforderung kommt und Informationen zu Browser und Betriebssystem.
-  
-    Das ist erforderlich, um unsere Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten. Dies entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO.
-  
-    Es erfolgt kein Tracking und wir haben auf diese Daten keinen direkten Zugriff.
-  
-    Wir setzen für die Zurverfügungstellung unserer Website folgenden Hoster ein:
-  
-    GitHub Inc.  
-    88 Colin P Kelly Jr St  
-    San Francisco, CA 94107  
-    United States
-  
-    Dieser ist Empfänger Ihrer personenbezogenen Daten. Dies entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO, selbst keinen Server in unseren Räumlichkeiten vorhalten zu müssen. Serverstandort ist USA.
-  
-    Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie unter: [https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages)
-  
-    Sie haben das Recht der Verarbeitung zu widersprechen. Ob der Widerspruch erfolgreich ist, ist im Rahmen einer Interessenabwägung zu ermitteln.
-  
-    Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.
-  
-    Die Verarbeitung der unter diesem Abschnitt angegebenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Die Funktionsfähigkeit der Website ist ohne die Verarbeitung nicht gewährleistet.
-  
-    GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle weltweiten Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie unter: [https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors)
-- **Google-Dienste**
-  - **Anmeldeformular:** Die Anmeldung für Spieltische läuft über Google Forms, die Antworten landen in einer Google-Tabelle. Wir nutzen die von Ihnen eingegeben Daten um ihren Ort auf der Karte anzuzeigen und ggf. mit Ihnen Kontakt in Bezug auf ihr Spielangebot aufzunehmen.
-  - **Karten:** Die beiden Karten der Spielorte ("Das ganze Jahr" und "Spielwoche") stammen von Google My Maps (Google). Sie werden erst geladen, wenn Besucher:innen auf "Karte laden" klicken. Dann werden Daten an Google übertragen. Wer "Karte künftig direkt laden" wählt, dessen Browser speichert diese Wahl lokal.
-  - **Allgemein:** Beim Zugriff auf manche Teildienste unserer Website werden zusätzliche personenbezogene Daten verarbeitet. Dabei verarbeitete Datenkategorien: technische Verbindungsdaten des Serverzugriffs (IP-Adresse, Datum, Uhrzeit, abgefragte Seite, Browser-Informationen) und Daten zur Erstellung von Nutzungsstatistiken. Zweck der Verarbeitung: Auslieferung von Inhalten, die von Dritten bereitgestellt werden und Anzeige interaktiver Karten. Die Rechtsgrundlage für die Verarbeitung: ein berechtigtes Interesse, das die Rechte und Freiheiten der betroffenen Personen überwiegt (Art. 6 (1) f DSGVO). Berechtigte Interessen in diesem Zusammenhang: Interesse an einer nutzerfreundlichen Darstellung von Inhalten. Eine Übermittlung von Daten erfolgt: an den Auftragsverarbeiter Google Cloud EMEA Limited, 70 Sir John Rogerson's Quay, Dublin 2, EIR-D02 R 296 Dublin, Irland ([https://cloud.google.com](https://cloud.google.com)). Dies kann auch eine Übermittlung von personenbezogenen Daten in ein Land außerhalb der Europäischen Union bedeuten. Die Übermittlung der Daten in die USA erfolgt aufgrund Art. 45 DSGVO iVm der Angemessenheitsentscheidung C(2023) 4745 der Europäischen Kommission, da sich der Datenempfänger zur Einhaltung der Grundsätze der Datenverarbeitung des Data Privacy Frameworks (DPF) verpflichtet hat.
-- **Schriften:** Die Schriften liegen auf dieser Seite selbst, es werden keine Daten an Schriftanbieter übertragen.
-- **Keine Analyse- oder Werbe-Cookies:** Derzeit nutzen wir keine Analyse- oder Werbe-Cookies
-- **Alle gesetzlich vorgeschriebenen Rechte nach der DSGVO** können Sie wahrnehmen durch Kontaktaufnahme über die Möglichkeiten in unserem [Impressum.](https://spielbruecke.de/impressum/)
+## 1. Verantwortlicher
 
+Anton Skornyakov\
+c/o Agile.Coach GmbH & Co. KG\
+Mühlenstr. 8a\
+14167 Berlin\
+E-Mail: kontakt (at-Zeichen) spielbruecke.de
+
+Die Spielbrücke ist eine private Initiative. Verantwortlich ist Anton Skornyakov als Privatperson.
+
+## 2. Aufruf der Webseite (Hosting bei GitHub Pages)
+
+Die Webseite liegt bei GitHub Pages. Anbieter ist GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Wenn du die Seite aufrufst, verarbeitet GitHub technisch notwendige Daten, die dein Browser übermittelt, insbesondere deine IP-Adresse, Datum und Uhrzeit des Aufrufs, die aufgerufene Seite, die zuvor besuchte Seite (Referrer) sowie Angaben zu Browser und Betriebssystem.
+
+Das ist nötig, um die Seite auszuliefern und ihre Sicherheit und Stabilität zu gewährleisten. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und zuverlässigen Betrieb der Seite, ohne eigene Server betreiben zu müssen (Art. 6 Abs. 1 lit. f DSGVO). Wir selbst haben keinen Zugriff auf diese Daten und werten sie nicht aus. Wie lange GitHub sie speichert, legt GitHub fest. Laut GitHub hängt die Dauer vom Zweck und von gesetzlichen Pflichten ab.
+
+Dabei können Daten in die USA übermittelt werden. GitHub gibt an, nach dem EU-US Data Privacy Framework zertifiziert zu sein. Die Übermittlung stützt sich auf den Angemessenheitsbeschluss der EU-Kommission vom 10. Juli 2023 (Art. 45 DSGVO). Mehr dazu in der [Datenschutzerklärung von GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
+Die Domain verwalten wir bei Cloudflare nur als Namensverzeichnis (DNS). Aufrufe der Seite laufen nicht über Cloudflare.
+
+## 3. Karten der Spielorte (Google My Maps)
+
+Die Karten "Das ganze Jahr" und "Spielwoche" stammen von Google My Maps. Sie werden **erst geladen, wenn du auf "Karte laden" klickst**. Vorher werden keine Daten an Google übertragen.
+
+Mit dem Klick willigst du ein, dass Google Daten verarbeitet, insbesondere deine IP-Adresse, Datum und Uhrzeit, die Seite, von der du kommst, und Angaben zu deinem Browser, und dass Google dabei Cookies oder ähnliche Techniken auf deinem Gerät nutzen kann. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG).
+
+Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Dabei können Daten an Google LLC in den USA übermittelt werden. Google LLC ist nach dem EU-US Data Privacy Framework zertifiziert, die Übermittlung stützt sich auf den Angemessenheitsbeschluss der EU-Kommission vom 10. Juli 2023 (Art. 45 DSGVO). Wie Google die Daten verwendet, steht in der [Datenschutzerklärung von Google](https://policies.google.com/privacy?hl=de).
+
+Wenn du "Karte künftig direkt laden" anhakst, speichert dein Browser diese Wahl lokal auf deinem Gerät. An uns wird dabei nichts übertragen. Du kannst deine Einwilligung jederzeit widerrufen, indem du die gespeicherten Website-Daten für spielbruecke.de in deinem Browser löschst. Danach lädt die Karte erst wieder nach einem neuen Klick.
+
+## 4. Anmeldung für Spieltische (Google Forms)
+
+Wenn du einen Spieltisch anmeldest, verarbeiten wir die Angaben zu deinem Ort und deinem Angebot (Name und Adresse des Ortes, Zeiten, Plätze, Spiele, Beschreibung, Link) sowie deinen Namen, deine E-Mail-Adresse, optional deine Telefonnummer, deine Rolle, gegebenenfalls Name und E-Mail einer weiteren Spielleitung und deine Nachricht an uns.
+
+- **Veröffentlichung auf der Karte:** Die Angaben zu Ort und Angebot zeigen wir auf der Webseite und den Karten, wenn du dem im Formular zustimmst (Art. 6 Abs. 1 lit. a DSGVO). Kontaktdaten veröffentlichen wir nie. Wenn du als Ort deine private Adresse angibst, wird auch diese öffentlich sichtbar.
+- **Organisation:** Deine Kontaktdaten nutzen wir, um deine Teilnahme mit dir abzustimmen, dir den Leitfaden zu schicken und auf Wunsch einen Vorbereitungs-Call zu vereinbaren (Art. 6 Abs. 1 lit. b DSGVO).
+- **Facilitation-Tests und Austausch:** Wenn du angibst, dass du daran Interesse hast, laden wir dich dazu ein (Art. 6 Abs. 1 lit. a DSGVO).
+- **Widerruf:** Du kannst jede Einwilligung jederzeit mit Wirkung für die Zukunft per Mail an: kontakt (at-Zeichen) spielbruecke.de widerrufen. Dann nehmen wir deinen Ort von der Karte.
+- **Empfänger:** Formular und Antworten liegen bei Google Workspace. Anbieter ist Google Cloud EMEA Limited, 70 Sir John Rogerson's Quay, Dublin 2, Irland, als Auftragsverarbeiter auf Grundlage eines Auftragsverarbeitungsvertrags. Eine Übermittlung an Google LLC in den USA ist möglich und stützt sich auf den oben genannten Angemessenheitsbeschluss. Zugriff auf die Antworten hat nur unser Orga-Team.
+- **Speicherdauer:** Angaben zu einem Angebot in der Spielwoche löschen wir spätestens zwölf Monate nach der Spielwoche. Angaben zu einem regelmäßigen Angebot speichern wir, solange der Ort auf der Karte steht, und löschen sie spätestens zwölf Monate danach. Auf Wunsch löschen wir früher.
+
+## 5. Kontakt per E-Mail
+
+Wenn du uns schreibst, verarbeiten wir deine E-Mail-Adresse und den Inhalt deiner Nachricht, um dir zu antworten. Rechtsgrundlage ist unser berechtigtes Interesse, Anfragen zu beantworten (Art. 6 Abs. 1 lit. f DSGVO), bei Anfragen zur Teilnahme die Abstimmung deiner Teilnahme (Art. 6 Abs. 1 lit. b DSGVO). Unser Postfach liegt bei Uberspace in Deutschland, mit dem wir einen Auftragsverarbeitungsvertrag geschlossen haben. Wir löschen Nachrichten, wenn die Anfrage erledigt ist, spätestens nach zwölf Monaten.
+
+## 6. Schriften und Cookies
+
+Die Schriften liegen auf dieser Seite selbst, es werden keine Daten an Schriftanbieter übertragen. Wir setzen keine Analyse- oder Werbe-Cookies. Nur wenn du die Karte lädst, kann Google eigene Cookies setzen (siehe Abschnitt 3).
+
+## 7. Deine Rechte
+
+Du hast das Recht auf Auskunft über deine Daten (Art. 15 DSGVO), auf Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18) und Datenübertragbarkeit (Art. 20). Gegen Verarbeitungen auf Grundlage unseres berechtigten Interesses kannst du Widerspruch einlegen (Art. 21). Einwilligungen kannst du jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3).
+
+Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), zum Beispiel bei der Berliner Beauftragten für Datenschutz und Informationsfreiheit.
+
+Für alle Anliegen erreichst du uns unter:  kontakt (at-Zeichen) spielbruecke.de.
