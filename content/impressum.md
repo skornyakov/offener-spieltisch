@@ -1,8 +1,8 @@
 ---
 title: Impressum
 description: Dieses ist ein private Initiative, solange wir noch keinen Verein
-  oder ähnliches gegründet haben, steht hier die Adresse der Firma eines der
-  Gründer. Es ist jedoch geplant einen gemeinnützige Organisation zu gründen.
+  oder ähnliches gegründet haben, steht hier die Adresse der Firma. Es ist
+  jedoch geplant einen gemeinnützige Organisation zu gründen.
 illustration: keine
 anmelde_knopf: false
 ---
