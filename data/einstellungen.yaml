@@ -1,12 +1,11 @@
 name: Spielbrücke
-untertitel: ""
 slogan: Spielen verbindet.
 zeitraum: "Spielwoche: 25. bis 31. Januar 2027"
-beschreibung: Die Spielbrücke bringt Menschen aus verschiedenen Bubbles an offenen
-  Spieltischen zusammen. Mit einer Karte der Spieltreffpunkte und der Spielwoche
-  vom 25. bis 31. Januar 2027.
+beschreibung: Die Spielbrücke bringt Menschen aus verschiedenen Bubbles an
+  offenen Spieltischen zusammen. Mit einer Karte der Spieltreffpunkte und der
+  Spielwoche vom 25. bis 31. Januar 2027.
 kontakt_email: kontakt@spielbruecke.de
-anmeldung_link: ""
+anmeldung_link: https://docs.google.com/forms/d/e/1FAIpQLSc__Djmxa7COzjV69P2ZFD691IMu12edcrs5hoIJi5IWUMkIQ/viewform
 anmeldung_knopf: Jetzt anmelden
 anmeldung_hinweis: Das Formular liegt bei Google Forms und öffnet sich in einem
   neuen Tab. Was mit deinen Angaben passiert, steht in der Datenschutzerklärung.
@@ -14,12 +13,10 @@ karte_ganzjahr: <iframe
   src="https://www.google.com/maps/d/u/0/embed?mid=1hIqDMXYHqEHorLdqjrKNn_c-JHJejNY&ehbc=2E312F"
   width="640" height="480"></iframe>
 karte_ganzjahr_reiter: Das ganze Jahr
-karte_ganzjahr_text: Hier wird das ganze Jahr über regelmäßig gespielt. Die Karte
-  bleibt auch nach der Spielwoche bestehen.
-karte_spielwoche: ""
+karte_ganzjahr_text: Hier wird das ganze Jahr über regelmäßig gespielt. Die
+  Karte bleibt auch nach der Spielwoche bestehen.
 karte_spielwoche_reiter: Spielwoche 2027
-karte_spielwoche_text: Offene Spieltische in der Spielwoche vom 25. bis 31. Januar
-  2027.
+karte_spielwoche_text: Offene Spieltische in der Spielwoche vom 25. bis 31. Januar 2027.
 karte_start: ganzjahr
 karte_hinweis: Die Karte wird von Google Maps geladen. Dabei werden Daten (z. B.
   deine IP-Adresse) an Google übertragen. Mehr dazu in der Datenschutzerklärung.
