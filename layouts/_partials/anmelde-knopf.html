@@ -1,0 +1,19 @@
+{{- /* Kasten mit dem Knopf zum Anmeldeformular (Google Forms).
+     Erscheint auf Seiten, bei denen im CMS "Anmelde-Knopf anzeigen" angehakt ist.
+     Der Link zum Formular steht im CMS unter "Einstellungen" > "Anmeldung". */ -}}
+{{- $s := hugo.Data.einstellungen }}
+{{- $link := $s.anmeldung_link | default "" | strings.TrimSpace }}
+<div class="anmelde-kasten">
+  {{ partial "wuerfel.html" (dict "augen" 3 "klasse" "anmelde-wuerfel") }}
+  <div class="anmelde-text">
+  {{- if $link }}
+    <a class="knopf knopf-haupt" href="{{ $link }}" target="_blank" rel="noopener">{{ $s.anmeldung_knopf | default "Jetzt anmelden" }}
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg>
+    </a>
+    {{ with $s.anmeldung_hinweis }}<p class="anmelde-hinweis">{{ . }}</p>{{ end }}
+  {{- else }}
+    <p class="anmelde-titel">Die Anmeldung öffnet in Kürze.</p>
+    <p class="anmelde-hinweis">Bis dahin erreichst du uns per Mail{{ with $s.kontakt_email }}: <a href="mailto:{{ . }}?subject=Spieltisch%20anbieten">{{ . }}</a>{{ end }}.</p>
+  {{- end }}
+  </div>
+</div>
