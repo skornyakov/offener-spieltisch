@@ -6,7 +6,7 @@
 baseURL = "https://example.org/"
 locale = "de-DE"
 defaultContentLanguage = "de"
-title = "Spielwoche"
+title = "Spielbrücke"
 timeZone = "Europe/Berlin"
 # Umlaute in Adressen umschreiben (ä -> a), damit Links sauber bleiben
 removePathAccents = true
@@ -25,7 +25,7 @@ disableKinds = ["taxonomy", "term", "rss"]
   unsafe = true
 
 [params]
-  description = "Eine Woche, in der Menschen, die sich sonst nie begegnen würden, gemeinsam spielen."
+  description = "Die Spielbrücke bringt Menschen aus verschiedenen Bubbles an offenen Spieltischen zusammen."
 
 [markup.goldmark.parser]
   # Sprungmarken ohne Umlaute: "Für Orte" wird zu #fur-orte

@@ -1,42 +1,46 @@
 hero:
-  oberzeile: 25. bis 31. Januar 2027
-  claim: Komm an den Tisch.
-  text: Eine Woche lang laden Cafés, Bibliotheken und Nachbarschaftstreffs zum Spielen ein. Du brauchst keine Spiele, keine Vorkenntnisse und keine Verabredung. Nur Lust, mit Menschen zu spielen, die du noch nicht kennst.
+  oberzeile: "Spielwoche: 25. bis 31. Januar 2027"
+  claim: Spielen verbindet.
+  text: "Lasst uns raus aus unseren Bubbles und weg von den Bildschirmen: spielerisch und persönlich in Kontakt kommen mit Menschen, denen wir sonst nie begegnet wären."
   knopf: Spiel in deiner Nähe finden
-  knopf2_text: Mitmachen
-  knopf2_link: /mitmachen/
+  knopf2_text: Spieltisch anbieten
+  knopf2_link: /anmelden/
 so_gehts:
-  titel: So funktioniert es
+  titel: So funktioniert die Spielbrücke
   schritte:
-    - titel: Orte öffnen ihre Tische
-      text: Bibliotheken, Familienzentren, Cafés, Stadtteiltreffs und Spieleläden stellen Platz und Tische bereit.
-    - titel: Spielleiter:innen holen Leute dazu
-      text: Spielbegeisterte erklären die Regeln, wählen einfache Spiele aus und sorgen dafür, dass niemand am Rand stehen bleibt.
-    - titel: Du setzt dich einfach dazu
-      text: Das Spiel übernimmt den schwierigsten Teil, den ersten Satz. Der Rest ergibt sich am Tisch.
+    - titel: Orte stellen Tische bereit
+      text: Bibliotheken, Spielecafés, Spieleläden, Vereine und Treffs laden an offene Spieltische ein.
+    - titel: Spielleiter:innen holen alle ins Spiel
+      text: Sie erklären Spiele und holen Fremde an den Tisch, auch wer sich nicht für spielbegeistert hält. Mit Leitfaden und Vorbereitungs-Call, wenn gewünscht.
+    - titel: Du setzt dich dazu
+      text: Auf der Karte findest du, wo und wann in deiner Nähe gespielt wird. Komm vorbei und lass dich auf neue Kontakte ein.
 karte:
-  titel: Hier wird schon heute gespielt
-  text: Viele Orte laden bereits regelmäßig zum Spielen ein. Auf der Karte findest du sie, mit Zeiten, Plätzen und den Spielen, die dort meist auf dem Tisch liegen.
+  titel: Hier wird gespielt
+  text: Auf unserer Karte sammeln wir Spieltreffpunkte wie Spielvereine, Spielecafés und Spieleabende in Bibliotheken. Klick auf einen Punkt, um zu sehen, wann dort gespielt wird.
   fehlt_text: Du kennst einen Ort, der fehlt? Schreib uns.
 spielwoche:
   titel: Die Spielwoche im Januar
   datum_gross: 25.–31.
   datum_klein: Januar 2027
-  text: Vom 25. bis 31. Januar 2027 wird überall gespielt, mit einem großen Spieletag am Samstag, 30. Januar. Wir starten in Berlin, und jeder Ort in Deutschland kann mitmachen.
+  text: "Eine Woche lang laden Orte Menschen an offene Spieltische ein. Das Ziel: nicht nur spielen, sondern miteinander in Kontakt kommen. Unbeschwert, ohne großen Anspruch, vor Ort und persönlich. Wir starten in Berlin, und jeder Ort in Deutschland kann mitmachen."
+blog:
+  titel: Neues von der Spielbrücke
 mitmachen:
   titel: Mach mit
   karten:
-    - titel: Für Orte
-      text: Du hast Tische und Lust auf neue Gesichter? Trag deinen Ort ein. Wir helfen dir, Spielleiter:innen zu finden.
-      link_text: Ort eintragen
-      link: /mitmachen/#fur-orte
-    - titel: Für Spielleiter:innen
-      text: Du erklärst gerne Spiele und holst Menschen an den Tisch? Dann brauchen wir dich, für einen Abend oder mehrere.
-      link_text: Spielleiter:in werden
-      link: /mitmachen/#fur-spielleiterinnen
-    - titel: Fürs Kernteam
-      text: Wir suchen Menschen, die mit uns Orte gewinnen, erzählen, was wir tun, und Spielleiter:innen begleiten.
-      link_text: Im Team mitarbeiten
-      link: /mitmachen/#furs-kernteam
-blog:
-  titel: Neues aus der Spielwoche
+    - titel: Spieltisch anbieten
+      text: Du hast einen Ort und Lust, Menschen durch Spiele zu verbinden? Melde dich an, für die Spielwoche, für ein regelmäßiges Angebot oder für beides.
+      link_text: Jetzt anmelden
+      link: /anmelden/
+    - titel: Spieltreff eintragen
+      text: Du kennst einen Spieltreff, einen Verein oder einen Spieleabend in einer Bibliothek, der auf die Karte gehört? Sag uns Bescheid.
+      link_text: Ort vorschlagen
+      link: /kontakt/
+    - titel: Spiele anleiten
+      text: Du willst Menschen durch Spiele verbinden, hast aber noch keinen Ort? Schreib uns, wir geben dir Tipps für die Suche in deiner Stadt.
+      link_text: So geht es
+      link: /mitmachen/#spiele-anleiten
+    - titel: Im Kernteam mitarbeiten
+      text: Wir suchen Menschen, die mit uns Orte gewinnen, von der Idee erzählen und Spielleiter:innen begleiten.
+      link_text: Mehr erfahren
+      link: /mitmachen/#im-kernteam-mitarbeiten

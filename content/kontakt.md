@@ -4,9 +4,11 @@ description: Fragen, Ideen, ein Ort für die Karte oder Lust mitzumachen? Schrei
 illustration: karten
 ---
 
-Am schnellsten erreichst du uns per Mail: [hallo@example.org](mailto:hallo@example.org)
+Am schnellsten erreichst du uns per Mail: [kontakt@spielbruecke.de](mailto:kontakt@spielbruecke.de)
 
-Wenn du einen Spielort vorschlagen möchtest, schick uns bitte:
+Du möchtest an deinem Ort einen Spieltisch anbieten? Dann nutze am besten direkt die [Anmeldung](/anmelden/).
+
+Wenn du einen bestehenden Spieltreff für die Karte vorschlagen möchtest, schick uns bitte:
 
 - Name und Adresse des Ortes
 - Wann dort gespielt wird (z. B. jeden Freitag, 18 bis 21 Uhr)

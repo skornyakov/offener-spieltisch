@@ -80,6 +80,11 @@ content:
             - { value: wuerfel, label: Würfel }
             - { value: figuren, label: Spielfiguren }
             - { value: karten, label: Spielkarten }
+      - name: anmelde_knopf
+        label: Anmelde-Knopf anzeigen
+        description: Zeigt oben und unten auf der Seite den Knopf zum Anmeldeformular.
+        type: boolean
+        default: false
       - name: body
         label: Text
         type: rich-text
@@ -155,14 +160,37 @@ content:
     fields:
       - { name: name, label: Name der Initiative, type: string }
       - { name: untertitel, label: Kleiner Zusatz neben dem Namen (leer lassen zum Ausblenden), type: string }
-      - { name: zeitraum, label: Zeitraum, type: string }
+      - { name: slogan, label: Slogan (erscheint im Titel der Startseite), type: string }
+      - { name: zeitraum, label: Zeitraum (erscheint in der Fußzeile), type: string }
       - { name: kerntag, label: Großer Spieletag, type: string }
       - { name: beschreibung, label: Kurzbeschreibung für Suchmaschinen, type: text }
       - { name: kontakt_email, label: Kontakt-E-Mail, type: string }
-      - name: karte_einbettung
-        label: Karte (Google My Maps)
+      - name: anmeldung_link
+        label: "Anmeldung: Link zum Google-Formular"
+        description: In Google Forms auf "Senden" > Link-Symbol klicken und den Link hier einfügen. Leer lassen, solange es kein Formular gibt. Dann steht dort "Die Anmeldung öffnet in Kürze".
+        type: string
+      - { name: anmeldung_knopf, label: "Anmeldung: Beschriftung des Knopfes", type: string }
+      - { name: anmeldung_hinweis, label: "Anmeldung: Satz unter dem Knopf", type: text }
+      - name: karte_ganzjahr
+        label: "Karte \"Das ganze Jahr\" (Google My Maps)"
         description: In My Maps auf "Teilen" > "In meine Website einbetten" klicken und den kompletten Code oder nur den Link hier einfügen. Leer lassen, solange es keine Karte gibt.
         type: text
+      - { name: karte_ganzjahr_reiter, label: "Karte \"Das ganze Jahr\": Beschriftung des Reiters", type: string }
+      - { name: karte_ganzjahr_text, label: "Karte \"Das ganze Jahr\": Satz über der Karte", type: text }
+      - name: karte_spielwoche
+        label: "Karte \"Spielwoche\" (Google My Maps)"
+        description: Wie oben, für die Karte mit den Spieltischen der Spielwoche.
+        type: text
+      - { name: karte_spielwoche_reiter, label: "Karte \"Spielwoche\": Beschriftung des Reiters", type: string }
+      - { name: karte_spielwoche_text, label: "Karte \"Spielwoche\": Satz über der Karte", type: text }
+      - name: karte_start
+        label: Welche Karte ist vorausgewählt?
+        type: select
+        default: ganzjahr
+        options:
+          values:
+            - { value: ganzjahr, label: Das ganze Jahr }
+            - { value: spielwoche, label: Spielwoche }
       - { name: karte_hinweis, label: Datenschutzhinweis vor dem Laden der Karte, type: text }
       - { name: footer_text, label: Text in der Fußzeile, type: text }
       - name: menue

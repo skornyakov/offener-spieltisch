@@ -8,7 +8,8 @@ illustration: keine
 
 - **Verantwortliche Stelle** (wie im Impressum)
 - **Hosting:** Die Seite liegt bei GitHub Pages (GitHub Inc.). Beim Aufruf werden technisch notwendige Daten wie die IP-Adresse verarbeitet.
-- **Karte:** Die Karte der Spielorte stammt von Google My Maps (Google). Sie wird erst geladen, wenn Besucher:innen auf "Karte laden" klicken. Dann werden Daten an Google übertragen. Wer "Karte künftig direkt laden" wählt, dessen Browser speichert diese Wahl lokal.
+- **Karten:** Die beiden Karten der Spielorte ("Das ganze Jahr" und "Spielwoche") stammen von Google My Maps (Google). Sie werden erst geladen, wenn Besucher:innen auf "Karte laden" klicken. Dann werden Daten an Google übertragen. Wer "Karte künftig direkt laden" wählt, dessen Browser speichert diese Wahl lokal.
+- **Anmeldeformular:** Die Anmeldung für Spieltische läuft über Google Forms, die Antworten landen in einer Google-Tabelle. Welche Daten abgefragt werden (Ort, Angebot, Kontaktdaten der anmeldenden Person), wofür sie genutzt werden, wer Zugriff hat und wann sie gelöscht werden. Hinweis, dass Angaben zum Ort und zum Angebot mit Einverständnis öffentlich auf der Karte erscheinen, Kontaktdaten aber nicht.
 - **Schriften:** Die Schriften liegen auf dieser Seite selbst, es werden keine Daten an Schriftanbieter übertragen.
 - **Kontakt per Mail:** Umgang mit Mails, die uns erreichen.
 - **Keine Analyse- oder Werbe-Cookies:** Stand jetzt nutzt die Seite keine.

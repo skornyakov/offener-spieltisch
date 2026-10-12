@@ -1,18 +1,29 @@
-{{- /* Die Karte der Spielorte (Google My Maps).
-     Sie wird erst geladen, wenn jemand auf "Karte laden" klickt (Datenschutz).
-     Im CMS unter "Einstellungen" > "Karte" den Link oder den ganzen iframe-Code eintragen. */ -}}
+{{- /* Die Karten der Spielorte (Google My Maps) mit zwei Reitern:
+     "Das ganze Jahr" und "Spielwoche". Im CMS unter "Einstellungen" > "Karten"
+     je Karte den Link oder den ganzen iframe-Code eintragen.
+     Google wird erst geladen, wenn jemand auf "Karte laden" klickt (Datenschutz). */ -}}
 {{- $s := hugo.Data.einstellungen }}
-{{- $roh := $s.karte_einbettung | default "" | strings.TrimSpace }}
-{{- $src := $roh }}
-{{- if in $roh "<iframe" }}
-  {{- $src = replaceRE `(?s).*src="([^"]+)".*` "$1" $roh }}
-{{- end }}
-{{- $src = $src | htmlUnescape }}
-<div class="karte">
-{{- if $src }}
-  {{- $ansicht := replace $src "/embed?" "/viewer?" }}
-  <div class="karte-rahmen" data-karte="{{ $src }}">
-    <div class="karte-zustimmung">
+{{- $reiter := slice
+  (dict "id" "ganzjahr" "roh" ($s.karte_ganzjahr | default $s.karte_einbettung) "titel" ($s.karte_ganzjahr_reiter | default "Das ganze Jahr") "text" $s.karte_ganzjahr_text)
+  (dict "id" "spielwoche" "roh" $s.karte_spielwoche "titel" ($s.karte_spielwoche_reiter | default "Spielwoche") "text" $s.karte_spielwoche_text)
+}}
+{{- $start := $s.karte_start | default "ganzjahr" }}
+{{- $aktiv := index $reiter 0 }}
+{{- range $reiter }}{{ if eq .id $start }}{{ $aktiv = . }}{{ end }}{{ end }}
+<div class="karte" data-karte-gruppe>
+  <div class="karte-reiter" role="tablist" aria-label="Welche Karte?">
+    {{- range $reiter }}
+    {{- $roh := .roh | default "" | strings.TrimSpace }}
+    {{- $src := $roh }}
+    {{- if in $roh "<iframe" }}{{ $src = replaceRE `(?s).*src="([^"]+)".*` "$1" $roh }}{{ end }}
+    {{- $src = $src | htmlUnescape }}
+    <button type="button" role="tab" class="karte-reiter-knopf" aria-selected="{{ if eq .id $aktiv.id }}true{{ else }}false{{ end }}"
+      data-reiter="{{ .id }}" data-src="{{ $src }}" data-ansicht="{{ replace $src "/embed?" "/viewer?" }}" data-text="{{ .text }}">{{ .titel }}</button>
+    {{- end }}
+  </div>
+  <p class="karte-reiter-text" data-reiter-text>{{ $aktiv.text }}</p>
+  <div class="karte-rahmen" data-karte-rahmen>
+    <div class="karte-zustimmung" data-karte-zustimmung>
       <svg class="karte-pin" viewBox="0 0 64 64" aria-hidden="true">
         <path d="M32 4C20 4 11 13 11 25c0 15 21 35 21 35s21-20 21-35C53 13 44 4 32 4z" class="pin-form"/>
         <circle cx="32" cy="25" r="9" class="pin-loch"/>
@@ -22,18 +33,14 @@
       <button class="knopf knopf-haupt" type="button" data-karte-laden>Karte laden</button>
       <label class="karte-merken"><input type="checkbox" data-karte-merken> Karte künftig direkt laden</label>
     </div>
-  </div>
-  <p class="karte-extra"><a href="{{ $ansicht }}" target="_blank" rel="noopener">Karte groß in Google Maps öffnen</a></p>
-{{- else }}
-  <div class="karte-rahmen karte-leer">
-    <div class="karte-zustimmung">
+    <div class="karte-zustimmung" data-karte-leer hidden>
       <svg class="karte-pin" viewBox="0 0 64 64" aria-hidden="true">
         <path d="M32 4C20 4 11 13 11 25c0 15 21 35 21 35s21-20 21-35C53 13 44 4 32 4z" class="pin-form"/>
         <circle cx="32" cy="25" r="9" class="pin-loch"/>
       </svg>
-      <p class="karte-titel">Die Karte kommt bald</p>
+      <p class="karte-titel">Diese Karte kommt bald</p>
       <p class="karte-hinweis">Wir sammeln gerade die ersten Spielorte.</p>
     </div>
   </div>
-{{- end }}
+  <p class="karte-extra" data-karte-extra><a data-karte-gross href="#" target="_blank" rel="noopener">Karte groß in Google Maps öffnen</a></p>
 </div>

@@ -1,6 +1,6 @@
-# Spielwoche Webseite: Anleitung
+# Spielbrücke Webseite: Anleitung
 
-Stand: 29.09.2026
+Stand: 12.10.2026
 
 Diese Anleitung führt dich einmal durch die Einrichtung (etwa 45 bis 60 Minuten) und erklärt danach, wie das Team die Seite pflegt. Programmieren musst du nichts.
 
@@ -9,7 +9,9 @@ Diese Anleitung führt dich einmal durch die Einrichtung (etwa 45 bis 60 Minuten
 - **GitHub** speichert die Seite als Dateien.
 - **Pages CMS** ist die Oberfläche, in der das Team Texte, Blogbeiträge und Bilder bearbeitet. Jede gespeicherte Änderung landet automatisch bei GitHub.
 - **GitHub Pages** baut die Seite nach jeder Änderung neu und stellt sie ins Netz. Das dauert etwa ein bis zwei Minuten.
-- **Google-Tabelle und Google My Maps** liefern die Karte der Spielorte. Die Karte wird auf der Seite eingebettet.
+- **Google Forms** nimmt Anmeldungen für Spieltische entgegen, die Antworten landen in einer Google-Tabelle.
+- **Google-Tabelle und Google My Maps** liefern die zwei Karten der Spielorte ("Das ganze Jahr" und "Spielwoche"). Sie werden auf der Seite eingebettet.
+- **Uberspace** stellt das Postfach für kontakt@spielbruecke.de bereit. Mit der Webseite hat Uberspace nichts zu tun.
 
 Kosten: 0 Euro, solange das Repository öffentlich ist. Für die eigene Domain kommen nur deren Kosten dazu.
 
@@ -19,15 +21,15 @@ Kosten: 0 Euro, solange das Repository öffentlich ist. Für die eigene Domain k
 
 ### Schritt 1: GitHub-Konto und leeres Repository
 
-1. Falls noch nicht vorhanden: Konto auf github.com anlegen. Tipp: Eine eigene Organisation für die Initiative (z. B. "spielwoche") macht es später leichter, Rechte zu teilen.
+1. Falls noch nicht vorhanden: Konto auf github.com anlegen. Tipp: Eine eigene Organisation für die Initiative (z. B. "spielbruecke") macht es später leichter, Rechte zu teilen.
 2. Oben rechts auf **+** und **New repository**.
-3. Name: z. B. `spielwoche`. Sichtbarkeit: **Public** (für kostenloses GitHub Pages nötig).
+3. Name: z. B. `spielbruecke`. Sichtbarkeit: **Public** (für kostenloses GitHub Pages nötig).
 4. **Keine** Häkchen bei README, .gitignore oder Lizenz setzen. Das Repository muss leer sein.
 5. **Create repository**.
 
 ### Schritt 2: Die Dateien hineinbringen
 
-**Weg A (am einfachsten):** Schick mir im Chat den Namen, z. B. `spielwoche-initiative/spielwoche`. Ich lade die Dateien direkt hoch. Du bekommst dabei eventuell eine Freigabe-Abfrage, die du bestätigen musst.
+**Weg A (am einfachsten):** Schick mir im Chat den Namen, z. B. `skornyakov/offener-spieltisch`. Ich lade die Dateien direkt hoch. Du bekommst dabei eventuell eine Freigabe-Abfrage, die du bestätigen musst.
 
 **Weg B (selbst):** Mit der kostenlosen App **GitHub Desktop**:
 1. App installieren und mit GitHub anmelden.
@@ -42,14 +44,14 @@ Das Hochladen über die GitHub-Webseite per Drag and Drop würde ich nicht nehme
 1. Im Repository auf **Settings > Pages**.
 2. Unter **Build and deployment > Source** die Option **GitHub Actions** wählen.
 3. Oben auf den Reiter **Actions** gehen. Dort sollte "Seite veröffentlichen" laufen. Falls nicht: den Eintrag links anklicken und **Run workflow**.
-4. Nach ein bis zwei Minuten steht unter **Settings > Pages** die Adresse, z. B. `https://spielwoche-initiative.github.io/spielwoche/`.
+4. Nach ein bis zwei Minuten steht unter **Settings > Pages** die Adresse, z. B. `https://skornyakov.github.io/offener-spieltisch/`.
 
 Wenn ein Lauf rot wird: Klick darauf und schick mir die Fehlermeldung.
 
 ### Schritt 4: Pages CMS verbinden
 
 1. Auf **app.pagescms.org** gehen und mit GitHub anmelden.
-2. Pages CMS bittet darum, seine GitHub-App zu installieren. Wähle dabei **nur** das Repository `spielwoche` aus, nicht alle.
+2. Pages CMS bittet darum, seine GitHub-App zu installieren. Wähle dabei **nur** das Repository `offener-spieltisch` aus, nicht alle.
 3. Das Repository öffnen. Links erscheinen **Blog**, **Seiten**, **Startseite**, **Einstellungen** und **Medien**.
 4. Team einladen: Wie ich die Doku verstehe, lädt man Mitstreiter:innen per E-Mail ein, sie brauchen dann kein eigenes GitHub-Konto. Den genauen Menüpunkt habe ich nicht selbst ausprobiert, er heißt in der Doku "Collaborators".
 
@@ -57,66 +59,71 @@ Wenn ein Lauf rot wird: Klick darauf und schick mir die Fehlermeldung.
 
 Beide Seiten sind Platzhalter mit einem deutlichen Warnhinweis. Bevor ihr die Adresse irgendwo teilt:
 - **Impressum:** Angaben eurer Firma eintragen.
-- **Datenschutz:** Die Seite listet auf, was vorkommen muss (Hosting bei GitHub, Google-Karte per Klick, keine Tracking-Cookies). Den eigentlichen Text bitte mit einem Generator erstellen oder prüfen lassen. Das ist keine Rechtsberatung von mir.
-- Unter **Einstellungen** die echte Kontakt-E-Mail eintragen (steht jetzt auf hallo@example.org, auch auf der Seite "Kontakt").
+- **Datenschutz:** Die Seite listet auf, was vorkommen muss (Hosting bei GitHub, Google-Karten per Klick, Anmeldeformular bei Google Forms, keine Tracking-Cookies). Den eigentlichen Text bitte mit einem Generator erstellen oder prüfen lassen. Das ist keine Rechtsberatung von mir.
+- Die Datenschutzerklärung muss jetzt auch das Anmeldeformular (Google Forms) abdecken.
 
-### Schritt 6: Eigene Domain (optional, später)
+### Schritt 6: Domain spielbruecke.de (DNS bei Cloudflare)
 
-1. Unter **Settings > Pages > Custom domain** die Domain eintragen, z. B. `www.spielwoche.de`.
-2. Beim Domainanbieter einen DNS-Eintrag setzen. GitHub zeigt an, welchen. Die Anleitung dazu steht in der GitHub-Hilfe unter "Managing a custom domain for your GitHub Pages site".
-3. Die Seite passt ihre Links automatisch an, dafür ist nichts zu ändern.
+Reihenfolge laut GitHub: erst die Domain bei GitHub eintragen, dann DNS setzen.
+
+1. **Domain bei GitHub verifizieren (empfohlen):** Profilbild > Settings > Pages > "Add a domain". Den angezeigten TXT-Eintrag bei Cloudflare anlegen und bei GitHub bestätigen.
+2. **Im Repository:** Settings > Pages > Custom domain: `spielbruecke.de` eintragen und speichern. Eine CNAME-Datei braucht ihr nicht.
+3. **Bei Cloudflare (DNS):**
+   - A-Einträge für `spielbruecke.de`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - optional AAAA-Einträge: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
+   - CNAME `www` auf `skornyakov.github.io` (ohne Repo-Namen)
+   - Bei diesen Einträgen den Cloudflare-Proxy ausschalten ("DNS only", graue Wolke), damit GitHub das HTTPS-Zertifikat ausstellen kann. Das ist meine Empfehlung, nicht aus der GitHub-Doku.
+   - Keine Wildcard-Einträge (`*.spielbruecke.de`) anlegen.
+4. **Warten:** Nach einigen Minuten bis Stunden ist die Seite unter spielbruecke.de erreichbar. "Enforce HTTPS" unter Settings > Pages anhaken, sobald es anklickbar ist (laut GitHub bis zu 24 Stunden).
+5. Die Seite passt ihre Links automatisch an, dafür ist nichts zu ändern.
+
+### Schritt 7: E-Mail kontakt@spielbruecke.de bei Uberspace
+
+1. Auf dem Uberspace: `uberspace mail domain add spielbruecke.de`
+2. `uberspace records show spielbruecke.de` zeigt die nötigen DNS-Einträge (MX, SPF als TXT, DKIM als TXT auf `uberspace._domainkey`). Diese bei Cloudflare anlegen.
+3. Postfach anlegen: `uberspace mail user add <name>`. Achtung: Ein Uberspace-Postfach gilt für alle Domains auf deinem Uberspace. Gibt es schon ein Postfach "kontakt" für eine andere Domain, landet die Post im selben Postfach.
+4. Mit `uberspace mail domain list` prüfen, ob die Domain aktiv ist.
 
 ---
 
-## Teil 2: Die Karte der Spielorte
+## Teil 2: Anmeldung und Karten
 
-### Google-Tabelle anlegen
+### Das Anmeldeformular
 
-Eine Zeile pro Ort. Vorschlag für die Spalten:
+1. Formular in Google Forms anlegen (Fragen siehe Planungsdokument "webseite-plan-schritt-2" im Projekt).
+2. In Google Forms unter **Antworten** eine Google-Tabelle verknüpfen. Die Antworten landen dort im Blatt der Formularantworten.
+3. Den Link zum Formular kopieren und in Pages CMS unter **Einstellungen > "Anmeldung: Link zum Google-Formular"** einfügen.
+4. Solange das Feld leer ist, zeigt die Seite "Spieltisch anbieten" den Hinweis "Die Anmeldung öffnet in Kürze" mit der Kontakt-Mail.
 
-| Spalte | Beispiel |
-|---|---|
-| Name | Café Würfelglück |
-| Adresse | Musterstraße 1, 10999 Berlin |
-| Art des Ortes | Café |
-| Wann | jeden Freitag, 18 bis 21 Uhr |
-| Plätze | 2 Tische, bis 10 Personen |
-| Typische Spiele | Carcassonne, Codenames, Wizard |
-| Für wen | Erwachsene, Einsteiger willkommen |
-| Kosten | frei, Verzehr erwünscht |
-| Link | https://... |
-| Freigegeben | ja |
-| Zuletzt geprüft | 29.09.2026 |
+### Die Tabelle
 
-Koordinaten braucht ihr nicht. Google findet die Orte über die Adresse. Google empfiehlt, nicht mehr als 2000 Zeilen auf einmal zu importieren.
+Eine Google-Tabelle mit diesen Blättern:
 
-**Freigabe und interne Spalten:** My Maps zeigt alle importierten Spalten im Popup an. Wenn "Freigegeben" und "Zuletzt geprüft" nicht öffentlich sein sollen, legt in der Tabelle ein zweites Blatt "Karte" an, das nur die öffentlichen Spalten der freigegebenen Zeilen enthält (z. B. mit der Formel `FILTER`), und importiert dieses Blatt. Wie My Maps bei mehreren Blättern auswählt, bitte beim ersten Import ausprobieren.
+- **Formularantworten** (automatisch). Hier nichts verändern.
+- **Orte** (Haupttabelle): links die internen Spalten (Veröffentlichen Spielwoche = 1, Veröffentlichen regelmäßig = 1, Status, Geprüft am, Notiz), ab dann genau die Spalten des Antwortblatts in derselben Reihenfolge. Geprüfte Antworten als ganze Zeile hierher kopieren. Kommt eine neue Formularfrage dazu (Google hängt sie rechts an), hier ebenfalls rechts eine Spalte anhängen.
+- **Export Spielwoche** und **Export regelmäßig**: holen per Formel nur die Zeilen mit einer 1 und nur die öffentlichen Spalten. Diese Blätter nie von Hand bearbeiten.
 
-### Karte in My Maps erstellen
+Wichtig: Nie das Blatt "Orte" selbst exportieren. My Maps zeigt jede Spalte im Popup, auch E-Mail und Telefon.
 
-1. Auf **mymaps.google.com** eine neue Karte anlegen und benennen.
-2. In der Legende bei der Ebene auf **Importieren** und die Google-Tabelle wählen.
-3. Die Adressspalte als Position wählen, den Namen als Titel.
-4. Farben oder Symbole nach "Art des Ortes" vergeben: Bei der Ebene auf **Einheitlicher Stil** klicken und nach der Spalte gruppieren.
+### Die zwei Karten in My Maps
 
-### Karte auf der Seite einbinden
+1. Auf **mymaps.google.com** zwei Karten anlegen, z. B. "Spielbrücke: das ganze Jahr" und "Spielbrücke: Spielwoche 2027".
+2. Jeweils das Export-Blatt öffnen, **Datei > Herunterladen > CSV**, und in die passende Karte importieren. Adressspalte als Position, Name als Titel.
+3. Farben nach "Art des Ortes": bei der Ebene auf **Einheitlicher Stil** klicken und nach der Spalte gruppieren.
+4. Beide Karten über **Teilen** öffentlich machen, dann im Menü mit den drei Punkten **In meine Website einbetten** wählen und den Code kopieren.
+5. In Pages CMS unter **Einstellungen** in die Felder für die Karte "Das ganze Jahr" bzw. "Spielwoche" einfügen. Ist ein Feld leer, zeigt der Reiter "Diese Karte kommt bald".
+6. Unter **"Welche Karte ist vorausgewählt?"** legt ihr fest, welcher Reiter beim Öffnen aktiv ist. Bis Januar "Das ganze Jahr", in der Spielwoche "Spielwoche".
 
-1. In My Maps die Karte über **Teilen** öffentlich machen.
-2. Im Menü mit den drei Punkten **In meine Website einbetten** wählen und den angezeigten Code kopieren.
-3. In Pages CMS unter **Einstellungen > Karte (Google My Maps)** einfügen und speichern.
-4. Nach ein bis zwei Minuten zeigt die Seite an der Stelle der Karte einen Knopf "Karte laden". Erst nach dem Klick lädt Google (Datenschutz). Besucher:innen können "Karte künftig direkt laden" anhaken.
-
-Die genauen Menübezeichnungen in My Maps habe ich nicht in dieser Sitzung geprüft. Falls sie abweichen: Gesucht ist der Einbettungscode (beginnt mit `<iframe`).
+Die genauen Menübezeichnungen in My Maps habe ich nicht selbst geprüft. Gesucht ist der Einbettungscode (beginnt mit `<iframe`).
 
 ### Neue oder geänderte Orte übernehmen
 
-Die Karte aktualisiert sich **nicht** automatisch. Nach Änderungen in der Tabelle:
+Die Karten aktualisieren sich **nicht** automatisch. Nach Änderungen in der Tabelle:
 
-1. In My Maps bei der Ebene auf die drei Punkte.
-2. **Neu importieren und zusammenführen > Neu importieren > Alle Elemente ersetzen**.
-3. Die Tabelle wählen. Farben nach Spalte bleiben erhalten.
+1. Das passende Export-Blatt als CSV herunterladen.
+2. In My Maps bei der Ebene auf die drei Punkte, **Neu importieren und zusammenführen > Neu importieren > Alle Elemente ersetzen**, die CSV wählen.
 
-An der Webseite muss dafür nichts geändert werden. Tipp: eine feste Person und ein fester Tag, z. B. jeden Montag.
+An der Webseite muss dafür nichts geändert werden.
 
 ---
 
@@ -131,11 +138,13 @@ An der Webseite muss dafür nichts geändert werden. Tipp: eine feste Person und
 
 ### Unterseite anlegen oder ändern
 
-1. Pages CMS > **Seiten**. Dort liegen Idee, Spielorte, Mitmachen, Kontakt, Impressum, Datenschutz.
+1. Pages CMS > **Seiten**. Dort liegen Idee, Spielorte, Spieltisch anbieten, Mitmachen, Kontakt, Impressum, Datenschutz.
 2. Neue Seite: **Neuer Eintrag**. Die Adresse ergibt sich aus dem Titel beim ersten Speichern, z. B. Titel "Presse" wird zu `/presse/`. Spätere Titeländerungen ändern die Adresse nicht.
 3. Damit sie im Menü erscheint: **Einstellungen > Hauptmenü** einen Eintrag mit Beschriftung und Link `/presse/` ergänzen.
 
-Hinweis zur Seite **Spielorte**: Sie zeigt automatisch die Karte über dem Text. Wenn ihr sie umbenennt, bitte den Dateinamen `karte.md` behalten.
+Hinweis zur Seite **Spielorte**: Sie zeigt automatisch die Karten über dem Text. Wenn ihr sie umbenennt, bitte den Dateinamen `karte.md` behalten.
+
+Hinweis zur Seite **Spieltisch anbieten** (`anmelden.md`): Das Häkchen "Anmelde-Knopf anzeigen" blendet oben und unten den Knopf zum Formular ein. Das Häkchen geht bei jeder Seite. Titel und Texte könnt ihr frei ändern, die Adresse `/anmelden/` bleibt.
 
 ### Startseite ändern
 
@@ -145,7 +154,7 @@ Pages CMS > **Startseite**. Dort stehen Claim, Einleitung, Knopftexte, die drei 
 
 - Interne Seiten mit Schrägstrichen: `/mitmachen/`
 - Externe Seiten vollständig: `https://...`
-- Die Sprungmarken auf der Mitmachen-Seite ergeben sich aus den Überschriften: "Für Orte" wird zu `/mitmachen/#fur-orte`. Wer die Überschrift ändert, muss den Link auf der Startseite anpassen.
+- Die Sprungmarken auf der Mitmachen-Seite ergeben sich aus den Überschriften: "Spiele anleiten" wird zu `/mitmachen/#spiele-anleiten`, aus Umlauten wird der Grundbuchstabe (ü wird u). Wer die Überschrift ändert, muss den Link auf der Startseite anpassen.
 
 ### Bilder und Illustrationen austauschen
 
@@ -164,7 +173,7 @@ Farben, Schriften, der Aufbau der Startseite oder neue Bereiche. Dafür müssen 
 |---|---|
 | `content/` | Seiten und Blogbeiträge (Markdown) |
 | `data/startseite.yaml` | Texte der Startseite |
-| `data/einstellungen.yaml` | Name, Menü, Kontakt, Karte |
+| `data/einstellungen.yaml` | Name, Menü, Kontakt, Anmeldung, Karten |
 | `layouts/` | Aufbau der Seiten (Hugo-Vorlagen) |
 | `assets/css/stil.css` | Farben und Gestaltung |
 | `static/` | Schriften, Favicon, hochgeladene Bilder |

@@ -1,34 +1,32 @@
 ---
 title: Mitmachen
-description: Die Spielwoche lebt von Orten, die Tische öffnen, und von Menschen, die andere an den Tisch holen.
+description: Schon ein kleines Feedback hilft. Hier findest du, wie du einsteigen kannst.
 illustration: wuerfel
 ---
 
-## Für Orte
+## Spieltisch anbieten
 
-Du betreibst eine Bibliothek, ein Familienzentrum, ein Café, einen Stadtteiltreff oder einen Spieleladen? Dann lade während der Spielwoche zum Spielen ein. Du entscheidest selbst, wann und wie lange.
+Du hast einen Ort, zum Beispiel eine Bibliothek, ein Café, einen Verein oder einen Treff, und möchtest Menschen durch Spiele verbinden? Dann [melde dich an](/anmelden/), für die Spielwoche, für ein regelmäßiges Angebot oder für beides. Wir unterstützen dich mit einem Leitfaden und auf Wunsch mit einem Vorbereitungs-Call.
 
-- Du stellst Platz und Tische bereit.
-- Wir tragen dich auf der Karte ein und helfen dir, Spielleiter:innen zu finden.
-- Eigene Spiele sind willkommen, aber keine Voraussetzung.
+## Spiele anleiten
 
-Die Anmeldung für Orte öffnet bald. Bis dahin: Schreib uns eine Mail.
+Du hast Lust, Menschen durch Spiele zu verbinden, aber noch keinen Ort? Schreib uns an [kontakt@spielbruecke.de](mailto:kontakt@spielbruecke.de). Wir geben dir Tipps, wie du in deiner Stadt einen findest.
 
-## Für Spielleiter:innen
+## Spieltreff eintragen
 
-Du erklärst gerne Spiele und hast Freude daran, Menschen zusammenzubringen? Als Spielleiter:in übernimmst du einen oder mehrere Termine an einem Ort in deiner Nähe.
+Du kennst einen Ort, an dem schon heute regelmäßig gespielt wird? Oder einen Ort, den wir ansprechen sollten? [Schreib uns](/kontakt/), dann tragen wir ihn auf der Karte ein oder fragen dort nach.
 
-- Du bringst ein paar einfache Spiele mit oder nutzt die Spiele vor Ort.
-- Du erklärst Regeln und holst Menschen an den Tisch.
-- Wir bereiten dich vor, mit einem kurzen Leitfaden und Online-Treffen.
-
-## Fürs Kernteam
+## Im Kernteam mitarbeiten
 
 Wir suchen Menschen, die bis Januar im Schnitt etwa vier Stunden pro Woche einbringen können. Zum Beispiel in diesen Rollen:
 
 - Orte gewinnen und begleiten
 - Kommunikation und Social Media
 - Spielleiter:innen betreuen und mit Orten zusammenbringen
-- Einen kurzen, praktischen Leitfaden schreiben
+- Den Leitfaden mitentwickeln
 
 Melde dich einfach, auch wenn du dich in keiner Rolle wiederfindest. Wir finden etwas Passendes.
+
+## Weitererzählen und Feedback geben
+
+Erzähl anderen von der Idee, oder sag uns, was du davon hältst. Schon ein kurzes Feedback hilft uns sehr.

@@ -13,9 +13,15 @@
     {{- if eq .File.ContentBaseName "karte" }}
     <div class="seiten-karte">{{ partial "karte.html" . }}</div>
     {{- end }}
+    {{- if .Params.anmelde_knopf }}
+    <div class="seiten-anmeldung">{{ partial "anmelde-knopf.html" . }}</div>
+    {{- end }}
     <div class="text">
       {{ .Content }}
     </div>
+    {{- if .Params.anmelde_knopf }}
+    <div class="seiten-anmeldung seiten-anmeldung-unten">{{ partial "anmelde-knopf.html" . }}</div>
+    {{- end }}
   </div>
 </article>
 {{ end }}
