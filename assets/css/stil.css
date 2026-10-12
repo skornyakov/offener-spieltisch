@@ -179,8 +179,6 @@ h3 { font-size: 1.3rem; font-weight: 700; }
 .woche-monat { display: block; font-weight: 700; margin-top: 6px; }
 .woche-text { position: relative; z-index: 1; max-width: 560px; }
 .woche-text p { color: #ddd9e8; margin: 0 0 12px; }
-.woche-text .woche-kerntag { color: var(--weiss); font-weight: 700; display: flex; align-items: center; gap: 10px; }
-.mini-wuerfel { width: 26px; height: 26px; flex: none; }
 @media (max-width: 700px) { .woche { grid-template-columns: 1fr; } .woche-datum { justify-self: start; } .woche::after { top: -50px; bottom: auto; right: -50px; width: 130px; height: 130px; border-width: 16px; } }
 
 /* Blog-Karten */

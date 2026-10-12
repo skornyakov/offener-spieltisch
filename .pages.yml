@@ -162,7 +162,6 @@ content:
       - { name: untertitel, label: Kleiner Zusatz neben dem Namen (leer lassen zum Ausblenden), type: string }
       - { name: slogan, label: Slogan (erscheint im Titel der Startseite), type: string }
       - { name: zeitraum, label: Zeitraum (erscheint in der Fußzeile), type: string }
-      - { name: kerntag, label: Großer Spieletag, type: string }
       - { name: beschreibung, label: Kurzbeschreibung für Suchmaschinen, type: text }
       - { name: kontakt_email, label: Kontakt-E-Mail, type: string }
       - name: anmeldung_link

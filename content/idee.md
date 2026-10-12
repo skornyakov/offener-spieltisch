@@ -33,7 +33,6 @@ Hinter der Initiative stehen Menschen, die spielbegeistert sind und Erfahrung da
 ## Die Spielwoche und die dauerhafte Karte
 
 - **Spielwoche:** 25. bis 31. Januar 2027
-- **Großer Spieletag:** Samstag, 30. Januar 2027
 - **Wo:** Wir starten in Berlin. Jeder Ort in Deutschland kann mitmachen.
 
 Auf unserer [Karte](/karte/) sammeln wir außerdem bestehende Spieltreffpunkte wie Spielvereine, Spielecafés und Spieleabende in Bibliotheken. Die Karte bleibt auch nach der Spielwoche bestehen.

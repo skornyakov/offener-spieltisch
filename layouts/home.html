@@ -59,7 +59,6 @@
       <div class="woche-text">
         <h2 id="spielwoche-titel" class="abschnitt-titel">{{ $h.spielwoche.titel }}</h2>
         <p>{{ $h.spielwoche.text }}</p>
-        {{ with $s.kerntag }}<p class="woche-kerntag">{{ partial "wuerfel.html" (dict "augen" 6 "klasse" "mini-wuerfel") }} Großer Spieletag: {{ . }}</p>{{ end }}
       </div>
     </div>
   </div>
