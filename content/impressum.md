@@ -1,19 +1,19 @@
 ---
 title: Impressum
-description: ""
+description: Dieses ist ein private Initiative, solange wir noch keinen Verein
+  oder ähnliches gegründet haben, steht hier die Adresse der Firma eines der
+  Gründer. Es ist jedoch geplant einen gemeinnützige Organisation zu gründen.
 illustration: keine
+anmelde_knopf: false
 ---
-
-**Achtung: Dieser Text ist ein Platzhalter und muss vor der Veröffentlichung ersetzt werden.**
-
 Angaben gemäß § 5 DDG
 
-[Name der Firma]\
-[Straße und Hausnummer]\
-[PLZ und Ort]
+Anton Skornyakov  
+c/o Agile.Coach GmbH & Co. KG
+Mühlenstr. 8a
+14167 Berlin
+Tel.: 030 /­ 692 086 593
 
-Vertreten durch: [Name]
+E-Mail: kontakt (at-Zeichen) spielbruecke.de
 
-E-Mail: [E-Mail-Adresse]
-
-Verantwortlich für den Inhalt: [Name, Anschrift]
+Verantwortlich für den Inhalt: Anton Skornyakov, c/o Agile.Coach GmbH & Co. KG, Mühlenstr. 8a, 14167 Berlin
